@@ -1,0 +1,58 @@
+body {
+    background-color: beige;
+}
+
+
+.container {
+    display: grid;
+    width: 100wh;
+    margin: auto;
+    grid-template-columns: 90vw;
+    grid-template-rows: 10vh 5vh 70vh 1fr;
+    grid-template-areas:
+        "hd"
+        "sd"
+        "main"
+        "ft";
+    grid-gap: 10px;
+    border: 2px red solid;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px green solid;
+    padding: 15px;
+}
+
+#header {
+    grid-area: hd;
+}
+
+#nav {
+    grid-area: sd;
+}
+
+#content {
+    grid-area: main;
+}
+
+#footer {
+    grid-area: ft;
+}
+
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: 10vw 80vw;
+        grid-template-rows: 15vh 70vh 5vh;
+        grid-template-areas:
+            "hd hd hd hd hd hd hd hd"
+            "sd main main main main main main main"
+            "ft ft ft ft ft ft ft ft";
+    }
+}
+
+/* grid-auto-rows: minmax(100px, auto) sets rows height to min 100*/
+/* grid-template-columns: repeat(6, fr) FR uses the leftoverspace */
