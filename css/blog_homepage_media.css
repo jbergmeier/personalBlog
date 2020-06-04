@@ -1,0 +1,20 @@
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 15vh 70vh 5vh;
+        grid-template-areas:
+            "hd hd hd hd hd hd hd hd"
+            "sd main main main main main main main"
+            "ft ft ft ft ft ft ft ft";
+    }
+
+    #content {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .blogPostPreview {
+        max-width: 18vw;
+    }
+}
